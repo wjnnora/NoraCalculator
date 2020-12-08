@@ -1,0 +1,29 @@
+PYPI
+
+Instalar o pacote "twine":
+
+> pip install twine
+
+Para gerar um pacote .tar, executar o comando a baixo no diretório do package:
+
+> python setup.py sdist
+
+===============================
+
+Fazendo o upload do package para o Pypi:
+
+> twine upload dist/*
+
+Depois de ter feito o upload, é possível instalar o pacote utilizando o comando pip:
+
+> pip install NoraCalculator
+
+===========================================================
+
+Fazendo o upload do package para o Pypi Test:
+
+> twine upload --repository-url https://test.pypi.org/legacy/ dist/* 
+
+Após o upload, podemos instalar o pacote utilizando:
+
+> pip install --index-url https://test.pypi.org/simple package-name
